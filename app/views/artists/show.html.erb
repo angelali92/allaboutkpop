@@ -1,1 +1,16 @@
-show.html.erb
+<h2><%= @artist.last_name %></h2>
+<h2><%= @artist.first_name %></h2>
+<p> Stage Name: <%= @artist.stage_name %></p>
+
+<p>
+Agency: <%= @artist.agency %><br/>
+Gender: <%= @artist.gender %><br/>
+Birthday: <%= Date::MONTHNAMES[@artist.birthday.month] %> <%= @artist.birthday.day %>, <%= @artist.birthday.year %><br/>
+Blood Type: <%= @artist.bloodType %><br/>
+Zodiac Sign: <%= @artist.horoscope %><br/>
+</p>
+<br/>
+
+<p><%= link_to "Edit", edit_artist_path %></p>
+<p><%= link_to "Back", artists_path %></p>
+<p><%= link_to "Delete", @artist, method: "delete" %></p>
