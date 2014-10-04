@@ -38,3 +38,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# For heroku
+gem 'rails_12factor', group: :production
+ruby '2.1.2'
+
+# For production
+gem 'thin', group: :production
+
+
