@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  agency: MyString
+  isActor: false
+  gender: MyString
+  debut: 2014-10-04 02:55:56
+  birthday: 2014-10-04 02:55:56
+  bloodType: MyString
+  horoscope: MyString
+
+two:
+  name: MyString
+  agency: MyString
+  isActor: false
+  gender: MyString
+  debut: 2014-10-04 02:55:56
+  birthday: 2014-10-04 02:55:56
+  bloodType: MyString
+  horoscope: MyString

@@ -1,0 +1,43 @@
+<h2> Artists </h2>
+
+<div class="table-responsive col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<table class="table table-hover" width="100%"> 
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Stage Name</th>
+				<th>Last Name</th>
+				<th>Agency</th>
+				<th>Actor?</th>
+				<th>Gender</th>
+				<th>Debut Date</th>
+				<th>Birthday</th>
+				<th>Blood Type</th>
+				<th>Zodiac Sign</th>
+				<th colspan="8"></th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @artists.each do |artist| %>
+				<tr>
+					<td><%= artist.first_name %></td>
+					<td><%= artist.stage_name %></td>
+					<td><%= artist.last_name %></td>
+					<td><%= artist.agency %></td>
+					<td><%= artist.isActor %></td>
+					<td><%= artist.gender %></td>
+					<td><%= artist.debut %></td>
+					<td><%= artist.birthday %></td>
+					<td><%= artist.bloodType %></td>
+					<td><%= artist.horoscope %></td>
+					<td><%= link_to 'Show', artist %></td>
+					<td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+					<td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<%= link_to 'Add New Artist', new_artist_path %>

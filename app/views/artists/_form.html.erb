@@ -1,0 +1,24 @@
+<%= form_for @artist do |f| %>
+	<div><%= f.label :first_name %>:</div>
+	<div><%= f.text_field :first_name %></div>
+	<div><%= f.label :stage_name %>:</div>
+	<div><%= f.text_field :stage_name %></div>
+	<div><%= f.label :last_name %>:</div>
+	<div><%= f.text_field :last_name %></div>
+	<div><%= f.label :agency %>:</div>
+	<div><%= f.text_field :agency %></div>
+	<div><%= f.label :isActor %>:</div>
+	<div><%= f.check_box :isActor %></div>
+	<div><%= f.label :gender %>:</div>
+	<div><%= f.select :gender, %w{Male Female}, :include_blank => true %></div>
+	<div><%= f.label :debut %>:</div>
+	<div><%= f.date_select :debut, :order => [:month, :day, :year], :start_year => 1950 %></div>
+	<div><%= f.label :birthday %>:</div>
+	<div><%= f.date_select :birthday, :order => [:month, :day, :year], :start_year => 1950 %></div>
+	<div><%= f.label :bloodType %>:</div>
+	<div><%= f.select :bloodType, %w{A B AB O}, :include_blank => true %></div>
+	<div><%= f.label :horoscope %>:</div>
+	<div><%= f.select :horoscope, %w{Aries Taurus Gemini Cancer Leo Virgo Libra Scorpio Sagittarius Capricorn Aquarius Pisces}, :include_blank => true %></div>
+	<br/>
+	<div><%= f.submit %></div>
+<% end %>
