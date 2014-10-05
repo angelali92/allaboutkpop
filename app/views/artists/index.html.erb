@@ -4,6 +4,7 @@
 	<table class="table table-hover" width="100%"> 
 		<thead>
 			<tr>
+				<th>Profile Picture</th>
 				<th>First Name</th>
 				<th>Stage Name</th>
 				<th>Last Name</th>
@@ -14,13 +15,14 @@
 				<th>Birthday</th>
 				<th>Blood Type</th>
 				<th>Zodiac Sign</th>
-				<th colspan="8"></th>
+				<th colspan="11"></th>
 			</tr>
 		</thead>
 
 		<tbody>
 			<% @artists.each do |artist| %>
 				<tr>
+					<td><img width="100px" src=<%= artist.image_url%>></img></td>
 					<td><%= artist.first_name %></td>
 					<td><%= artist.stage_name %></td>
 					<td><%= artist.last_name %></td>

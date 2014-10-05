@@ -1,11 +1,17 @@
 class ArtistsController < ApplicationController
 
 	def index
-		@artists = Artist.all
+		respond_to do |format|
+			format.json { @artists = Artist.all }
+			format.html { @artists = Artist.all }
+		end
 	end
 
 	def show
-		@artist = Artist.find(params[:id])
+		respond_to do |format|
+			format.json { @artist = Artist.find(params[:id]) }
+			format.html { @artist = Artist.find(params[:id]) }
+		end
 	end
 
 	def new
@@ -45,6 +51,6 @@ class ArtistsController < ApplicationController
 
 	private
 		def artist_params
-			params.require(:artist).permit(:first_name, :stage_name, :last_name, :agency, :isActor, :gender, :debut, :birthday, :bloodType, :horoscope)
+			params.require(:artist).permit(:first_name, :stage_name, :last_name, :agency, :isActor, :gender, :debut, :birthday, :bloodType, :horoscope, :image_url)
 		end
 end

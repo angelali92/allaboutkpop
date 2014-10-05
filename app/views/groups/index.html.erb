@@ -1,0 +1,39 @@
+<h2> Groups </h2>
+
+<div class="table-responsive col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<table class="table table-hover" width="100%"> 
+		<thead>
+			<tr>
+				<th>Picture</th>
+				<th>Group Name</th>
+				<th>Agency</th>
+				<th>Number of Members</th>
+				<th>Gender</th>
+				<th>Debut Date</th>
+				<th>Average Age</th>
+				<th>Average Height</th>
+				<th colspan="8"></th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @groups.each do |group| %>
+				<tr>
+					<td><img width="150px" src=<%= group.image_url%>></img></td>
+					<td><%= group.name %></td>
+					<td><%= group.agency %></td>
+					<td><%= group.num_members %></td>
+					<td><%= group.gender %></td>
+					<td><%= group.debut %></td>
+					<td><%= group.avg_age %></td>
+					<td><%= group.avg_height %></td>
+					<td><%= link_to 'Show', group %></td>
+					<td><%= link_to 'Edit', edit_group_path(group) %></td>
+					<td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<%= link_to 'Add New Group', new_group_path %>

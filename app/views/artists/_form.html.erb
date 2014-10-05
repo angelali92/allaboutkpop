@@ -19,6 +19,8 @@
 	<div><%= f.select :bloodType, %w{A B AB O}, :include_blank => true %></div>
 	<div><%= f.label :horoscope %>:</div>
 	<div><%= f.select :horoscope, %w{Aries Taurus Gemini Cancer Leo Virgo Libra Scorpio Sagittarius Capricorn Aquarius Pisces}, :include_blank => true %></div>
+	<div><%= f.label :image_url %>:</div>
+	<div><%= f.text_field :image_url %></div>
 	<br/>
 	<div><%= f.submit %></div>
 	<%= link_to "Back", artists_path %>

@@ -1,0 +1,17 @@
+<%= form_for @group do |f| %>
+	<div><%= f.label :name %>:</div>
+	<div><%= f.text_field :name %></div>
+	<div><%= f.label :agency %>:</div>
+	<div><%= f.text_field :agency %></div>
+	<div><%= f.label :num_members %>:</div>
+	<div><%= f.number_field :num_members %></div>
+	<div><%= f.label :gender %>:</div>
+	<div><%= f.select :gender, %w{Male Female}, :include_blank => true %></div>
+	<div><%= f.label :debut %>:</div>
+	<div><%= f.date_select :debut, :order => [:month, :day, :year], :start_year => 1950 %></div>
+	<div><%= f.label :image_url %>:</div>
+	<div><%= f.text_field :image_url %></div>
+	<br/>
+	<div><%= f.submit %></div>
+	<%= link_to "Back", groups_path %>
+<% end %>
