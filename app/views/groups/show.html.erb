@@ -1,0 +1,15 @@
+<h2><%= @group.name %></h2>
+
+<img width="150px" src=<%= @group.image_url%>></img>
+<p>
+Agency: <%= @group.agency %><br/>
+Gender: <%= @group.gender %><br/>
+Debut Date: <%= Date::MONTHNAMES[@group.debut.month] %> <%= @group.debut.day %>, <%= @group.debut.year %><br/>
+Average Age: <%= @group.avg_age %><br/>
+Average Height: <%= @group.avg_height %><br/>
+</p>
+<br/>
+
+<p><%= link_to "Edit", edit_group_path %></p>
+<p><%= link_to "Back", groups_path %></p>
+<p><%= link_to "Delete", @group, method: "delete" %></p>
