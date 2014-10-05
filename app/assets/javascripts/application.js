@@ -14,8 +14,3 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
-
-
-
-// Keep this code at the end of the file.
-$('.dropdown-toggle').dropdown();
